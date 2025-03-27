@@ -17,6 +17,8 @@ export default function SidebarSearchField() {
   const { replace } = useRouter()
   const pathname = usePathname()
   const [isPending, startTransition] = useTransition()
+  const { t } = useTranslation(lng, 'basic')
+
 
   function handleSearch(term) {
     const params = new URLSearchParams(window.location.search)
@@ -38,7 +40,7 @@ export default function SidebarSearchField() {
       </label>
       <input
         id="sidebar-search-input"
-        placeholder="Search"
+        placeholder={t('search')}
         type="text"
         onChange={(e) => handleSearch(e.target.value)}
       />
