@@ -38,6 +38,9 @@ export function middleware(request) {
   return Response.redirect(request.nextUrl)
 }
 
+// 测试auth中间件
+// export { auth as middleware } from "auth"
+
 export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
 }
