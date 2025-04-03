@@ -1,5 +1,5 @@
 import SidebarNoteListFilter from '@/components/SidebarNoteListFilter';
-import { getAllNotes } from '@/lib/redis';
+import { getAllNotes } from '@/lib/strapi';
 import { sleep } from '@/lib/utils'
 
 export default async function NoteList() {
